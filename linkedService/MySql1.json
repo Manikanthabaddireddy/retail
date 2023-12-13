@@ -1,0 +1,23 @@
+{
+	"name": "MySql1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "MySql",
+		"typeProperties": {
+			"connectionString": "Server=localhost;Port=3306;Database=EVERGREEN_REST;User=root;SSLMode=1;UseSystemTrustStore=0",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "pwd"
+			}
+		},
+		"connectVia": {
+			"referenceName": "MSsqlserverIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

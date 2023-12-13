@@ -1,0 +1,9 @@
+{
+	"name": "manibaddireddy",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d0a743c5-7a77-453c-bb0b-242a7e158c79",
+		"tenantId": "78a7381a-6934-48fe-aa0a-3e21df174268"
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@item().Tables_in_evergreen_rest",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@utcNow('yyyy-MM-dd')",
+					"type": "Expression"
+				},
+				"fileSystem": "stagging"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

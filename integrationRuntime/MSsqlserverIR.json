@@ -1,0 +1,6 @@
+{
+	"name": "MSsqlserverIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
