@@ -101,6 +101,33 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "stagging to landing",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "iterating tables",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/RETAIL/stagging to landing"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"folder": {
