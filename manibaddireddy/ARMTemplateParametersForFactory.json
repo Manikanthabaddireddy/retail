@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "manibaddireddy"
+		},
+		"AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks_accessToken": {
+			"value": ""
+		},
+		"MySql1_connectionString": {
+			"value": "Server=localhost;Port=3306;Database=EVERGREEN_REST;User=root;SSLMode=1;UseSystemTrustStore=0"
+		},
+		"ONPREMSqlServer_connectionString": {
+			"value": ""
+		},
+		"Snowflake_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://ogpower.dfs.core.windows.net/"
+		},
+		"AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"value": "1210-153132-i62py4f9"
+		},
+		"AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://letskeep.vault.azure.net/"
+		}
+	}
+}
