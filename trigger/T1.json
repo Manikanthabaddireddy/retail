@@ -12,7 +12,7 @@
 			},
 			{
 				"pipelineReference": {
-					"referenceName": "mysql_to_stagging",
+					"referenceName": "mysql_to_snowflake_end_to_end",
 					"type": "PipelineReference"
 				}
 			}
