@@ -2,11 +2,17 @@
 	"name": "T1",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
 					"referenceName": "slqserver_to_stagging",
+					"type": "PipelineReference"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "mysql_to_stagging",
 					"type": "PipelineReference"
 				}
 			}
