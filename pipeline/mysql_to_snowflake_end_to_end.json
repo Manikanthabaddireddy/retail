@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Lookup1",
+				"name": "lookup for config",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -31,7 +31,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Lookup1",
+						"activity": "lookup for config",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -130,7 +130,7 @@
 				}
 			},
 			{
-				"name": "Notebook1",
+				"name": "landing to transformed",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
