@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "lookup for config",
+				"name": "lookup 1",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -31,7 +31,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "lookup for config",
+						"activity": "lookup 1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
