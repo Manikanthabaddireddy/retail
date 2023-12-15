@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "MySqlSource",
-						"query": "show tables where Tables_in_evergreen_rest like '%ever%';"
+						"query": "show tables wheree Tables_in_evergreen_rest like '%ever%';"
 					},
 					"dataset": {
 						"referenceName": "mysql",
@@ -192,6 +192,61 @@
 						"type": "AzureBlobFSReadSettings",
 						"recursive": true,
 						"enablePartitionDiscovery": false
+					}
+				}
+			},
+			{
+				"name": "send-mail-if-fail",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Failed"
+						]
+					},
+					{
+						"activity": "iterating tables",
+						"dependencyConditions": [
+							"Failed"
+						]
+					},
+					{
+						"activity": "stagging to landing",
+						"dependencyConditions": [
+							"Failed"
+						]
+					},
+					{
+						"activity": "landing to transformed",
+						"dependencyConditions": [
+							"Failed"
+						]
+					},
+					{
+						"activity": "Delete stagging",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://prod-70.eastus.logic.azure.com:443/workflows/23302d9352b24ceab00b9cbf5c98eb38/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=TmpejU-X6V4gD7oV_5SiqCRe4V8vWD0yHdD0Egj_T9Y",
+					"method": "POST",
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"body": {
+						"value": "{\n    \"pipeline\":\"@{pipeline().Pipeline}\",\n    \"ErrorMessage\":\"@{activity('Lookup1').Error.Message}\",\n    \"DataFactoryName\":\"@{pipeline().DataFactory}\",\n    \"RunID\":\"@{pipeline().RunId}\"\n\n\n\n}",
+						"type": "Expression"
 					}
 				}
 			}
