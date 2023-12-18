@@ -130,7 +130,7 @@
 				}
 			},
 			{
-				"name": "Notebook1",
+				"name": "landing to transformed",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
