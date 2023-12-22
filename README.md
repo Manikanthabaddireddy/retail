@@ -11,7 +11,7 @@ Django: Web framework for data generation application\
 MySQL: On-premise database for storing generated data\
 Azure Data Factory: Cloud-based ETL service for data ingestion and transformation\
 Azure Data Lake Storage: Scalable cloud storage for landing and raw zones\
-Snowflake: Cloud data warehouse for storing transformed data\
+Snowflake: Cloud data warehouse for storing transformed data
 ## Project Structure
 
 app (Django application):\
@@ -19,25 +19,25 @@ adf (Azure Data Factory pipelines):\
 ingestion_pipeline: Defines pipeline for copying data from MySQL to Azure Data Lake\
 transformation_pipeline: Defines pipeline for transforming data and loading to Snowflake\
 snowflake_scripts:\
-create_tables: SQL script to create OLAP tables in Snowflake\
+create_tables: SQL script to create OLAP tables in Snowflake
 ## Data Flow
 
 Data Generation:
 
 Users interact with Django forms to create data for customers, products, and orders.
-Data is stored in the MySQL database.
+Data is stored in the MySQL database.\
 Ingestion Pipeline:
 
 Azure Data Factory pipeline (ingestion_pipeline) is triggered periodically.
-Data is copied from MySQL to Azure Data Lake Storage (landing zone).
+Data is copied from MySQL to Azure Data Lake Storage (landing zone).\
 Raw Zone:
 
 Data is copied from the landing zone to the raw zone in Azure Data Lake Storage.
-Data is partitioned by date for efficient storage and retrieval.
+Data is partitioned by date for efficient storage and retrieval.\
 Transformation:
 
 Azure Data Factory pipeline (transformation_pipeline) is triggered when new data arrives in the raw zone.
-Data is transformed and prepared for loading into Snowflake OLAP tables.
+Data is transformed and prepared for loading into Snowflake OLAP tables.\
 Snowflake:
 
 Snowpipe automatically loads transformed data into Snowflake tables upon arrival.
