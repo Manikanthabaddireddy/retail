@@ -25,16 +25,15 @@ create_tables: SQL script to create OLAP tables in Snowflake
 Data Generation:
 
 Users interact with Django forms to create data for customers, products, and orders.
-Data is stored in the MySQL database.\
+Data is stored in the MySQL database.
 
 Ingestion Pipeline:Azure Data Factory pipeline (ingestion_pipeline) is triggered periodically.
-Data is copied from MySQL to Azure Data Lake Storage (landing zone).\
+Data is copied from MySQL to Azure Data Lake Storage (landing zone).
 
 Raw Zone:Data is copied from the landing zone to the raw zone in Azure Data Lake Storage.
-Data is partitioned by date for efficient storage and retrieval.\
-
+Data is partitioned by date for efficient storage and retrieval.
 Transformation:Azure Data Factory pipeline (transformation_pipeline) is triggered when new data arrives in the raw zone.
-Data is transformed and prepared for loading into Snowflake OLAP tables.\
+Data is transformed and prepared for loading into Snowflake OLAP tables.
 
 Snowflake:Snowpipe automatically loads transformed data into Snowflake tables upon arrival.
 Data is ready for analysis and reporting in Snowflake.
