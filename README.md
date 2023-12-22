@@ -9,20 +9,20 @@ This project demonstrates a retail data pipeline that simulates customer, produc
 
 Django: Web framework for data generation application\
 MySQL: On-premise database for storing generated data\
-Azure Data Factory: Cloud-based ETL service for data ingestion and transformation
-Azure Data Lake Storage: Scalable cloud storage for landing and raw zones
-Snowflake: Cloud data warehouse for storing transformed data
+Azure Data Factory: Cloud-based ETL service for data ingestion and transformation\
+Azure Data Lake Storage: Scalable cloud storage for landing and raw zones\
+Snowflake: Cloud data warehouse for storing transformed data\
 ## Project Structure
 
-app (Django application):
-models.py: Defines data models for customers, products, and orders
-views.py: Handles form submissions and data creation
-urls.py: Maps URLs to views
-adf (Azure Data Factory pipelines):
-ingestion_pipeline.json: Defines pipeline for copying data from MySQL to Azure Data Lake
-transformation_pipeline.json: Defines pipeline for transforming data and loading to Snowflake
-snowflake_scripts:
-create_tables.sql: SQL script to create OLAP tables in Snowflake
+app (Django application):\
+models.py: Defines data models for customers, products, and orders\
+views.py: Handles form submissions and data creation\
+urls.py: Maps URLs to views\
+adf (Azure Data Factory pipelines):\
+ingestion_pipeline.json: Defines pipeline for copying data from MySQL to Azure Data Lake\
+transformation_pipeline.json: Defines pipeline for transforming data and loading to Snowflake\
+snowflake_scripts:\
+create_tables.sql: SQL script to create OLAP tables in Snowflake\
 ## Data Flow
 
 Data Generation:
