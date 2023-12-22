@@ -7,8 +7,8 @@ This project demonstrates a retail data pipeline that simulates customer, produc
 
 ## Technologies Used
 
-Django: Web framework for data generation application
-MySQL: On-premise database for storing generated data
+Django: Web framework for data generation application\
+MySQL: On-premise database for storing generated data\
 Azure Data Factory: Cloud-based ETL service for data ingestion and transformation
 Azure Data Lake Storage: Scalable cloud storage for landing and raw zones
 Snowflake: Cloud data warehouse for storing transformed data
