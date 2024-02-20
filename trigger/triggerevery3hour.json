@@ -1,0 +1,24 @@
+{
+	"name": "triggerevery3hour",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "weather_api_to_landing_zone",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 3,
+				"startTime": "2024-02-12T17:10:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

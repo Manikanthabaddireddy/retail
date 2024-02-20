@@ -1,0 +1,9 @@
+{
+	"name": "jobless7571",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9aa08f10-ad25-41e6-b137-605de1b9d7cf",
+		"tenantId": "4e196b06-c033-4d52-b07f-aca545c3d283"
+	}
+}
